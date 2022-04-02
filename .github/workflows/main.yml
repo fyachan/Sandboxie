@@ -32,8 +32,8 @@ jobs:
     #  - name: Do Tests
     #    run: .\TestCI.cmd
 
-    #    - name: Build Sandboxie 64 bit
-    #      run: msbuild /t:build Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
+      - name: Build Sandboxie 64 bit
+        run: msbuild /t:build Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
 
       - name: Cache Qt
         id: cache-qt
