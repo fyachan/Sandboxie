@@ -68,20 +68,8 @@ FORMS += ./Forms/NewBoxWindow.ui \
     ./Forms/SelectBoxWindow.ui \
     ./Forms/FileBrowserWindow.ui
 
-TRANSLATIONS += sandman_de.ts \
-    sandman_en.ts \
-    sandman_es.ts \
-    sandman_fr.ts \
-    sandman_it.ts \
-    sandman_nl.ts \
-    sandman_pl.ts \
-    sandman_pt_BR.ts \
-    sandman_pt_PT.ts \
-    sandman_ru.ts \
-    sandman_uk.ts \
-    sandman_zh_CN.ts \
-    sandman_zh_TW.ts
+TRANSLATIONS += sandman_en.ts \
+    sandman_zh_CN.ts
 
-#   sandman_tr.ts (unmaintained)
 
 RESOURCES += Resources/SandMan.qrc
