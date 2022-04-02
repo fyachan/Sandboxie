@@ -754,17 +754,17 @@ _FX PROCESS *Process_Create(
         if (proc->bAppCompartment)
             exclusive_setting = L"NoSecurityIsolation";
 
-        if (exclusive_setting) {
+        // if (exclusive_setting) {
 
-            Log_Msg_Process(MSG_6004, proc->box->name, exclusive_setting, box->session_id, proc->pid);
+        //     Log_Msg_Process(MSG_6004, proc->box->name, exclusive_setting, box->session_id, proc->pid);
 
-            //Pool_Delete(pool);
-            //Process_CreateTerminated(ProcessId, box->session_id);
-            //return NULL;
+        //     //Pool_Delete(pool);
+        //     //Process_CreateTerminated(ProcessId, box->session_id);
+        //     //return NULL;
             
-            // allow the process to run for a sort while to allow the features to be avaluated
-            Process_ScheduleKill(proc, 5*60*1000); // 5 minutes
-        }
+        //     // allow the process to run for a sort while to allow the features to be avaluated
+        //     Process_ScheduleKill(proc, 5*60*1000); // 5 minutes
+        // }
     }
 
     //
