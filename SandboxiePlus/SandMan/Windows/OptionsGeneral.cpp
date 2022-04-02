@@ -30,17 +30,17 @@ void COptionsWindow::CreateGeneral()
 	if ((g_FeatureFlags & CSbieAPI::eSbieFeatureCert) == 0)
 	{
 		ui.lblSupportCert->setVisible(true);
-		connect(ui.lblSupportCert, SIGNAL(linkActivated(const QString&)), theGUI, SLOT(OpenUrl(const QString&)));
+		// connect(ui.lblSupportCert, SIGNAL(linkActivated(const QString&)), theGUI, SLOT(OpenUrl(const QString&)));
 
-		for (int i = 0; i < ui.cmbBoxType->count(); i++)
-		{
-			int BoxType = ui.cmbBoxType->itemData(i, Qt::UserRole).toInt();
-			bool disabled = BoxType != CSandBoxPlus::eDefault && BoxType != CSandBoxPlus::eHardened;
+		// for (int i = 0; i < ui.cmbBoxType->count(); i++)
+		// {
+		// 	int BoxType = ui.cmbBoxType->itemData(i, Qt::UserRole).toInt();
+		// 	bool disabled = BoxType != CSandBoxPlus::eDefault && BoxType != CSandBoxPlus::eHardened;
 
-			QStandardItemModel* model = qobject_cast<QStandardItemModel*>(ui.cmbBoxType->model());
-			QStandardItem* item = model->item(i);
-			item->setFlags(disabled ? item->flags() & ~Qt::ItemIsEnabled : item->flags() | Qt::ItemIsEnabled);
-		}
+		// 	QStandardItemModel* model = qobject_cast<QStandardItemModel*>(ui.cmbBoxType->model());
+		// 	QStandardItem* item = model->item(i);
+		// 	item->setFlags(disabled ? item->flags() & ~Qt::ItemIsEnabled : item->flags() | Qt::ItemIsEnabled);
+		// }
 	}
 
 	m_HoldBoxType = false;

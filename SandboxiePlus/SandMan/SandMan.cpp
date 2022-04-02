@@ -539,7 +539,7 @@ void CSandMan::CreateToolBar()
 	//m_pToolBar->addSeparator();
 	
 
-	if (!g_Certificate.isEmpty())
+	//if (!g_Certificate.isEmpty())
 		return;
 
 	QWidget* pSpacer = new QWidget();
@@ -1143,7 +1143,8 @@ void CSandMan::OnStatusChanged()
 		theAPI->WatchIni(false);
 	}
 
-	m_pSupport->setVisible(g_Certificate.isEmpty());
+	//m_pSupport->setVisible(g_Certificate.isEmpty());
+	m_pSupport->setVisible(false);
 
 	this->setWindowTitle(appTitle);
 
@@ -1304,7 +1305,7 @@ void CSandMan::OnLogSbieMessage(quint32 MsgCode, const QStringList& MsgData, qui
 
 bool CSandMan::CheckCertificate() 
 {
-	if ((g_FeatureFlags & CSbieAPI::eSbieFeatureCert) != 0)
+	//if ((g_FeatureFlags & CSbieAPI::eSbieFeatureCert) != 0)
 		return true;
 
 	//if ((g_FeatureFlags & CSbieAPI::eSbieFeatureCert) == 0) {

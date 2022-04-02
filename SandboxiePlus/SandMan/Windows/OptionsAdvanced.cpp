@@ -252,7 +252,7 @@ void COptionsWindow::SaveAdvanced()
 void COptionsWindow::OnIsolationChanged()
 {
 	if (ui.chkPrivacy->isChecked() || ui.chkUseSpecificity->isChecked())
-		theGUI->CheckCertificate();
+		theGUI->CheckCertificate();//
 
 	UpdateBoxIsolation();
 

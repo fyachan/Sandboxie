@@ -62,8 +62,8 @@ void CNewBoxWindow::OnBoxTypChanged()
 
 	ui.lblBoxInfo->setText(theGUI->GetBoxDescription(BoxType));
 
-	if(BoxType != CSandBoxPlus::eDefault && BoxType != CSandBoxPlus::eHardened)
-		theGUI->CheckCertificate();
+	//if(BoxType != CSandBoxPlus::eDefault && BoxType != CSandBoxPlus::eHardened)
+	//	theGUI->CheckCertificate();
 }
 
 void CNewBoxWindow::CreateBox()
